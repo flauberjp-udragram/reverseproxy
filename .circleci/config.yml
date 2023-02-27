@@ -32,7 +32,7 @@ workflows:
       - my-job
       - aws-eks/update-container-image:
           cluster-name: MyEKSCluster
-          resource-name: deployment/backend-feed
-          container-image-updates: "backend-feed=flauberjp/udagram-api-feed:<< pipeline.number >>"
+          resource-name: deployment/reverseproxy
+          container-image-updates: "reverseproxy=flauberjp/udagram-reverseproxy:<< pipeline.number >>"
           requires:
             - my-job
